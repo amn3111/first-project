@@ -32,3 +32,11 @@ Route::get('/products', function () {
 use App\Http\Controllers\ItemController;
 
 Route::get('/item', [ItemController::class, 'index']);
+
+function print_data($name, $age) {
+    return "Name is $name and Age is $age";
+}
+
+Route::get('/print_data/{name}/{age}', function ($name, $age) {
+    return print_data($name, $age);
+});
