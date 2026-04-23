@@ -26,3 +26,6 @@ Route::get('/add/{num1}/{num2}', function ($num1, $num2) {
 Route::get('/', function () {
     return 'Welcome';
 });
+Route::get('/products', function () {
+    return view('products');
+});
