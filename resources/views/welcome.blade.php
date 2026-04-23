@@ -222,5 +222,6 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+        <a href="/student/Amna/0551234567/10">Show Student Data</a>
     </body>
 </html>

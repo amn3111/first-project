@@ -40,3 +40,11 @@ function print_data($name, $age) {
 Route::get('/print_data/{name}/{age}', function ($name, $age) {
     return print_data($name, $age);
 });
+
+function student_data($st_name, $phone, $bus_no) {
+    return "Name: $st_name , Phone: $phone , Bus No: $bus_no";
+}
+
+Route::get('/student/{st_name}/{phone}/{bus_no}', function ($st_name, $phone, $bus_no) {
+    return student_data($st_name, $phone, $bus_no);
+});
