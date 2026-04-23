@@ -29,3 +29,6 @@ Route::get('/', function () {
 Route::get('/products', function () {
     return view('products');
 });
+use App\Http\Controllers\ItemController;
+
+Route::get('/item', [ItemController::class, 'index']);
