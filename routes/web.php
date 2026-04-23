@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
 
+Route::get('/company', [CompanyController::class, 'cmp']);
 function Firstcode() {
     return "Welcome To Laravel";
 }
