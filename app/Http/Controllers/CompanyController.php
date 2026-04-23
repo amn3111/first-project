@@ -12,4 +12,12 @@ class CompanyController extends Controller
             ->with('name', 'Amna')
             ->with('age', 22);
     }
+
+    public function camps()
+    {
+        return view('company', [
+            'name' => 'Amna',
+            'age' => 22
+        ]);
+    }
 }

@@ -50,3 +50,4 @@ function student_data($st_name, $phone, $bus_no) {
 Route::get('/student/{st_name}/{phone}/{bus_no}', function ($st_name, $phone, $bus_no) {
     return student_data($st_name, $phone, $bus_no);
 });
+Route::get('/company2', [CompanyController::class, 'camps']);
