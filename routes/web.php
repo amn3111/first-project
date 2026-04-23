@@ -16,3 +16,13 @@ function show($name) {
 Route::get('/show/{name}', function ($name) {
     return show($name);
 });
+function add($num1, $num2) {
+    return $num1 + $num2;
+}
+
+Route::get('/add/{num1}/{num2}', function ($num1, $num2) {
+    return add($num1, $num2);
+});
+Route::get('/', function () {
+    return 'Welcome';
+});
