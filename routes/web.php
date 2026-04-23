@@ -1,8 +1,9 @@
 <?php
 
-
+use App\Http\Controllers\EcommerceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+Route::get('/cars', [EcommerceController::class, 'List_Car']);
 Route::get('/company', [CompanyController::class, 'cmp']);
 Route::get('/company2', [CompanyController::class, 'camps']);
 Route::get('/depts', [CompanyController::class, 'my_depts']);
@@ -29,7 +30,7 @@ Route::get('/add/{num1}/{num2}', function ($num1, $num2) {
     return add($num1, $num2);
 });
 Route::get('/', function () {
-    return 'Welcome';
+    return view('welcome');
 });
 Route::get('/products', function () {
     return view('products');
