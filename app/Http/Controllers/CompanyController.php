@@ -20,4 +20,14 @@ class CompanyController extends Controller
             'age' => 22
         ]);
     }
+
+    public function my_depts()
+    {
+        $d1 = "IT";
+        $d2 = "HR";
+        $d3 = "Finance";
+        $d4 = "Marketing";
+
+        return view('depts', compact('d1', 'd2', 'd3', 'd4'));
+    }
 }

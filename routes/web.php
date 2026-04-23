@@ -1,9 +1,12 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
-
 Route::get('/company', [CompanyController::class, 'cmp']);
+Route::get('/company2', [CompanyController::class, 'camps']);
+Route::get('/depts', [CompanyController::class, 'my_depts']);
+
 function Firstcode() {
     return "Welcome To Laravel";
 }
@@ -50,4 +53,5 @@ function student_data($st_name, $phone, $bus_no) {
 Route::get('/student/{st_name}/{phone}/{bus_no}', function ($st_name, $phone, $bus_no) {
     return student_data($st_name, $phone, $bus_no);
 });
-Route::get('/company2', [CompanyController::class, 'camps']);
+
+
