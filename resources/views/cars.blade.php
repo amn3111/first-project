@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -11,15 +9,24 @@
 <div class="container mt-5">
     <h1 class="text-center mb-4">Cars List</h1>
 
-    <div class="card p-4 shadow">
-        <ul class="list-group">
-            @foreach($mycar as $car)
-                <li class="list-group-item">{{ $car }}</li>
-            @endforeach
-        </ul>
+    <div class="row">
+        @foreach($mycar as $car)
+            <div class="col-md-4">
+                <div class="card mb-4 shadow">
+                    <img src="{{ asset('images/' . $car['image']) }}" class="card-img-top" style="height:200px; object-fit:cover;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $car['name'] }}</h5>
+                        <p>Price: {{ $car['price'] }}</p>
+                        <p>Brand: {{ $car['brand'] }}</p>
+                        <p>Status: {{ $car['status'] }}</p>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 
-    <div class="mt-3 text-center">
+    <div class="text-center">
         <a href="/" class="btn btn-primary">Back Home</a>
     </div>
 </div>

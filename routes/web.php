@@ -3,6 +3,9 @@
 use App\Http\Controllers\EcommerceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+
+
+Route::get('/cars', [EcommerceController::class, 'List_Car']);
 Route::get('/cars', [EcommerceController::class, 'List_Car']);
 Route::get('/company', [CompanyController::class, 'cmp']);
 Route::get('/company2', [CompanyController::class, 'camps']);
